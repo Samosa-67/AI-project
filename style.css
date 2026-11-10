@@ -1,0 +1,160 @@
+/* ===== GENERAL DESIGN ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #080d16, #172638);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== GAME CONTAINER ===== */
+
+.game-container {
+    text-align: center;
+    background: #14212e;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(57, 211, 83, 0.15);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #a3ff12;
+    font-size: 32px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #9baebe;
+    margin-bottom: 25px;
+}
+
+/* ===== SCORE ===== */
+
+.score-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.score-box {
+    background: #203344;
+    padding: 10px 25px;
+    border-radius: 12px;
+    min-width: 120px;
+}
+
+.score-box span {
+    color: #a3ff12;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.score-box h2 {
+    margin: 5px 0 0;
+    font-size: 25px;
+}
+
+/* ===== CANVAS ===== */
+
+canvas {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 3px solid #39d353;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(57, 211, 83, 0.2);
+}
+
+/* ===== GAME INFO ===== */
+
+#info {
+    color: #a3ff12;
+    font-weight: bold;
+    min-height: 20px;
+    margin: 15px 0;
+}
+
+/* ===== BUTTONS ===== */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button {
+    background: #39d353;
+    color: #08120a;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #a3ff12;
+    transform: scale(1.05);
+}
+
+/* ===== GAME OVER ===== */
+
+.game-over {
+    background: #203344;
+    border: 2px solid #ff3b5c;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.game-over h2 {
+    color: #ff3b5c;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== INSTRUCTIONS ===== */
+
+.instructions {
+    color: #9baebe;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 25px;
+}
+
+/* ===== SMALL SCREENS ===== */
+
+@media (max-width: 450px) {
+
+    .game-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .score-box {
+        padding: 10px;
+    }
+
+}
