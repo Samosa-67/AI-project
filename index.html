@@ -69,6 +69,25 @@
         // Commit regularly.
         //
         // Step 1: Movement (game loop)
+        function moveSnake() {
+    // Calculate new head coordinates
+    const newHead = {
+        x: snake[0].x + direction.x,
+        y: snake[0].y + direction.y
+    };
+
+    // Add new head to front of array
+    snake.unshift(newHead);
+
+    // Remove tail segment to keep same length
+    snake.pop();
+}
+
+// Run game loop every 150 milliseconds
+setInterval(() => {
+    moveSnake();
+    drawGame();
+}, 150);
         // Step 2: Keyboard controls (arrow keys)
         // Step 3: Eating and growing
         // Step 4: Game over
